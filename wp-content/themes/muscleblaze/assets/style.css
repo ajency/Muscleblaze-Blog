@@ -206,6 +206,10 @@ img.custom-logo {
 	margin-top: -10px;
 }
 
+a.custom-logo-link:focus {
+	outline: none !important;
+}
+
 
 @media(max-width: 768px) {
 	.desktop-header {
@@ -518,7 +522,7 @@ input#field_cgcfe {
 	background-color: initial;
 }
 
-button.frm_button_submit {
+.frm_button_submit {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     background-color: #fde100 !important;

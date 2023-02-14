@@ -29,7 +29,7 @@ $my_query = new WP_Query($args);
 		<?php
 		$image = get_field('image');
 		if (!empty($image)) : ?>
-			<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img-main" />
+			<img src="http://localhost:81/mb_blogs/wp-content/uploads/2023/02/Featureimage_ex.jpg" alt="banner" class="img-main" />
 		<?php endif; ?>
 	</div>
 	<div class="about-container">

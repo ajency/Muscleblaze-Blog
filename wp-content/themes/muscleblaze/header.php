@@ -109,7 +109,7 @@ do_action('genesis_after_header');
 			</div>
 			<div class="promo-text">
 				<div class="container-wrapper">
-					<p><?php echo the_field('promo'); ?></p>
+					<p>Level up your fitness journey with MuscleBlaze</p>
 				</div>
 			</div>
 		</div>

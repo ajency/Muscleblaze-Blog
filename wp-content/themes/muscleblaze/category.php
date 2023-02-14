@@ -1,17 +1,4 @@
 <?php
-
-/**
- * Genesis Sample.
- *
- * Template Name: Category
- *
- * This file adds the landing page template to the Genesis Sample Theme.
- *
- * @package Genesis Sample
- * @author  StudioPress
- * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
- */
 get_header();
 
 $category = get_queried_object();
@@ -27,11 +14,8 @@ $my_query = new WP_Query($args);
 
 <div class="body-container">
 	<div class="blogs-banner">
-		<?php
-		$image = get_field('image');
-		if (!empty($image)) : ?>
-			<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img-main" />
-		<?php endif; ?>
+			<img src="http://localhost:81/mb_blogs/wp-content/uploads/2023/02/Featureimage_ex.jpg" alt="banner" class="img-main" />
+
 	</div>
 	<div class="about-container">
 		<div class="blog-list">
