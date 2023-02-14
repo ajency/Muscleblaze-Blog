@@ -121,8 +121,8 @@ do_action('genesis_after_header');
 		<div class="header-mweb__container">
 			<div class="HK-pagecontainer">
 				<div class="header-mweb__logo">
-					<a href="/">
-						<img src="http://localhost:81/mb_blog/wp-content/uploads/2023/02/sv.png" alt="">
+					<a href="/articles" class="ban-link">
+						<img src="http://localhost:81/mb_blog/wp-content/uploads/2023/02/sv.png" alt="" class="mob-ban">
 					</a>
 				</div>
 			</div>

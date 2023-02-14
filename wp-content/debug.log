@@ -235,3 +235,5 @@ Stack trace:
 #2 C:\xampp\htdocs\mb_blogs\index.php(17): require('C:\\xampp\\htdocs...')
 #3 {main}
   thrown in C:\xampp\htdocs\mb_blogs\wp-content\themes\muscleblaze\page-templates\home.php on line 85
+[14-Feb-2023 06:00:24 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\xampp\htdocs\mb_blogs\wp-includes\update.php on line 728
+[14-Feb-2023 06:01:25 UTC] PHP Fatal error:  Out of memory (allocated 12582912) (tried to allocate 20480 bytes) in C:\xampp\htdocs\mb_blogs\wp-includes\class-wp-rewrite.php on line 1047

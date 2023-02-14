@@ -80,7 +80,4 @@ $my_query = new WP_Query($args);
 
 </div>
 
-
-<?php
- require_once get_stylesheet_directory() . "./footer.php";
-?>
+<?php get_footer();

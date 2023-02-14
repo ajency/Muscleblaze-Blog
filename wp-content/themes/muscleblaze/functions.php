@@ -289,13 +289,11 @@ function my_child_theme_styles()
 function enqueue_theme_scripts()
 {
 	global $wp_query;
-	wp_register_script('bootstrap', get_stylesheet_directory_uri() . '/assets/js/bootstrap.min.js', '', '', true);
 	wp_register_script('custom-js', get_stylesheet_directory_uri() . '/js/custom-js.js', '', '', true);
 	wp_register_script('jquerys', get_stylesheet_directory_uri() . '/js/jquery.js', '', '', true);
 	// wp_register_script('load-more', get_stylesheet_directory_uri() . '/js/load-more.js', '', '', true);
 
 	wp_enqueue_script('jquerys');
-	wp_enqueue_script('bootstrap');
 	wp_enqueue_script('custom-js');
 	// wp_enqueue_script('load-more');
 }
@@ -313,26 +311,3 @@ function wpb_custom_menu()
 	);
 }
 add_action('init', 'wpb_custom_menu');
-
-/* pagination */
-if (!function_exists('post_pagination')) :
-	function post_pagination($passedQuery)
-	{
-		$pager = 999999999; // need an unlikely integer
-?>
-		<div class="post-pagination">
-			<div class="post-pagination__wraper">
-				<?php echo paginate_links(array(
-					'base' => str_replace($pager, '%#%', esc_url(get_pagenum_link($pager))),
-					'format' => '?paged=%#%',
-					'current' => max(1, get_query_var('paged')),
-					'total' => $passedQuery->max_num_pages,
-					'show_all' => False,
-					'prev_next' => True,
-					'prev_text' => __('prev'),
-					'next_text' => __('next'),
-				)); ?>
-			</div>
-		</div>
-<?php }
-endif; ?>
