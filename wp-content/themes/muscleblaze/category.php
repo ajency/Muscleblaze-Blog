@@ -57,7 +57,7 @@ $my_query = new WP_Query($args);
 								</div>
 							</div>
 						</a>
-					<?php endwhile;
+				<?php endwhile;
 				endif;
 				wp_reset_postdata();
 				?>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Genesis Framework.
  *
@@ -11,7 +12,7 @@
  * @link    https://my.studiopress.com/themes/genesis/
  */
 
-genesis_structural_wrap( 'site-inner', 'close' );
+genesis_structural_wrap('site-inner', 'close');
 genesis_markup(
 	[
 		'close'   => '</div>',
@@ -24,21 +25,21 @@ genesis_markup(
  *
  * @since 1.0.0
  */
-do_action( 'genesis_before_footer' );
+do_action('genesis_before_footer');
 
 /**
  * Fires to display the main footer content.
  *
  * @since 1.0.1
  */
-do_action( 'genesis_footer' );
+do_action('genesis_footer');
 
 /**
  * Fires immediately after the `genesis_footer` action hook, before the site container closing markup.
  *
  * @since 1.0.0
  */
-do_action( 'genesis_after_footer' );
+do_action('genesis_after_footer');
 
 genesis_markup(
 	[
@@ -52,7 +53,7 @@ genesis_markup(
  *
  * @since 1.0.0
  */
-do_action( 'genesis_after' );
+do_action('genesis_after');
 wp_footer(); // We need this for plugins.
 
 genesis_markup(
@@ -90,7 +91,7 @@ genesis_markup(
 						<div class="subscribe-us">
 							<div class="email-input-wrapper">
 								<div class="form-group">
-									<div class="subscribe-input-wrap"><?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?></div>
+									<div class="subscribe-input-wrap"><?php echo FrmFormsController::get_form_shortcode(array('id' => 2)); ?></div>
 								</div>
 							</div>
 						</div>
