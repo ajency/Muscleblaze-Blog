@@ -84,62 +84,62 @@ do_action('genesis_before_header');
 do_action('genesis_after_header');
 ?>
 <div class="main-container-wrapper">
-<div class="hk-header-wrapper">
-	<div class="desktop-header">
-		<div class="header-top__container">
-			<div class="container-wrap">
-				<a href="#">
-					<?php
-					// Display the Custom Logo
-					the_custom_logo();
+	<div class="hk-header-wrapper">
+		<div class="desktop-header">
+			<div class="header-top__container">
+				<div class="container-wrap">
+					<a href="#">
+						<?php
+						// Display the Custom Logo
+						the_custom_logo();
 
-					// No Custom Logo, just display the site's name
-					if (!has_custom_logo()) {
-					?>
-						<h1><?php bloginfo('name'); ?></h1>
-					<?php } ?>
-				</a>
-				<div class="header-top__nav">
-					<strong><?php wp_nav_menu(array('theme_location' => 'topbar-menu')); ?></strong>
-					<div class="search-toogle">
-						<a href="javascript:void(0);" class="fa fa-search"></a>
-					</div>
-					<div class="search-form"><?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?></div>
-				</div>
-			</div>
-			<div class="promo-text">
-				<div class="container-wrapper">
-					<p>Level up your fitness journey with MuscleBlaze</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- mobile menu -->
-	<div class="header-mweb__outer-container">
-	<button class="hamburger">&#9776;</button>
-  <button class="cross">&#735;</button>
-		<div class="header-mweb__container">
-			<div class="HK-pagecontainer">
-				<div class="header-mweb__logo">
-					<a href="/articles" class="ban-link">
-						<img src="http://localhost:81/mb_blog/wp-content/uploads/2023/02/sv.png" alt="" class="mob-ban">
+						// No Custom Logo, just display the site's name
+						if (!has_custom_logo()) {
+						?>
+							<h1><?php bloginfo('name'); ?></h1>
+						<?php } ?>
 					</a>
+					<div class="header-top__nav">
+						<strong><?php wp_nav_menu(array('theme_location' => 'topbar-menu')); ?></strong>
+						<div class="search-toogle">
+							<a href="javascript:void(0);" class="fa fa-search"></a>
+						</div>
+						<div class="search-form"><?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?></div>
+					</div>
 				</div>
+				<div class="promo-text">
+					<div class="container-wrapper">
+						<p>Level up your fitness journey with MuscleBlaze</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- mobile menu -->
+		<div class="header-mweb__outer-container">
+			<button class="hamburger">&#9776;</button>
+			<button class="cross">&#735;</button>
+			<div class="header-mweb__container">
+				<div class="HK-pagecontainer">
+					<div class="header-mweb__logo">
+						<a href="/articles" class="ban-link">
+							<img src="http://localhost:81/mb_blog/wp-content/uploads/2023/02/sv.png" alt="" class="mob-ban">
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="mobile-menu-container-expandable">
+				<?php wp_nav_menu(array('theme_location' => 'mobile-menu')); ?>
+				<form role="search" method="get" id="searchform" class="wp-searchform" action="<?php echo esc_url(home_url('/')); ?>">
+					<div class="wp-searchform-container">
+						<label class="screen-reader-text" for="s"><?php _x('Search for:', 'label'); ?></label>
+						<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" />
+						<button type="submit" id="searchsubmit"><span class="icon"><i class="fa fa-search"></i></span></button>
+					</div>
+				</form>
 			</div>
 
 		</div>
-		<div class="mobile-menu-container-expandable">
-			<?php wp_nav_menu(array('theme_location' => 'mobile-menu')); ?>
-			<form role="search" method="get" id="searchform" class="wp-searchform" action="<?php echo esc_url(home_url('/')); ?>">
-				<div class="wp-searchform-container">
-					<label class="screen-reader-text" for="s"><?php _x('Search for:', 'label'); ?></label>
-					<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" />
-					<button type="submit" id="searchsubmit"><span class="icon"><i class="fa fa-search"></i></span></button>
-				</div>
-			</form>
-		</div>
 
 	</div>
-
-</div>
 </div>
