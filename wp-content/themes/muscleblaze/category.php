@@ -14,8 +14,11 @@ $my_query = new WP_Query($args);
 
 <div class="body-container">
 	<div class="blogs-banner">
-			<img src="http://localhost:81/mb_blogs/wp-content/uploads/2023/02/Featureimage_ex.jpg" alt="banner" class="img-main" />
-
+		<?php
+		$image = get_field('image');
+		if (!empty($image)) : ?>
+			<img src="https://staging-muscleblazeblog-staging.kinsta.cloud/wp-content/uploads/2023/02/Featureimage_ex.jpg" class="img-main" />
+		<?php endif; ?>
 	</div>
 	<div class="about-container">
 		<div class="blog-list">
