@@ -26,10 +26,8 @@ $my_query = new WP_Query($args);
 
 <div class="body-container">
 	<div class="blogs-banner">
-		<?php
-		$image = get_field('image');
-		if (!empty($image)) : ?>
-			<img src="http://localhost:81/mb_blogs/wp-content/uploads/2023/02/Featureimage_ex.jpg" alt="banner" class="img-main" />
+		<?php if (get_theme_mod('header_image')) : ?>
+			<img src="<?php echo esc_url(get_theme_mod('header_image')); ?>" alt="Header Image" class="img-main">
 		<?php endif; ?>
 	</div>
 	<div class="about-container">

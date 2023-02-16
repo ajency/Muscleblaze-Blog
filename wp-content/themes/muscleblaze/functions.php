@@ -311,3 +311,78 @@ function wpb_custom_menu()
 	);
 }
 add_action('init', 'wpb_custom_menu');
+
+// =========================================================================
+// REGISTER CUSTOMIZER - PANEL, SECTION, SETTINGS AND CONTROL
+// =========================================================================
+function theme_name_register_theme_customizer( $wp_customize ) {
+    // Create custom panel.
+    $wp_customize->add_panel( 'text_blocks', array(
+        'priority'       => 10,
+        'theme_supports' => '',
+        'title'          => __( 'Custom Theme Settings', 'Muscleblaze' ),
+        'description'    => __( 'Set editable text for certain content.', 'Muscleblaze' ),
+    ) );
+
+    // Add section for text
+    $wp_customize->add_section( 'custom_title_text' , array(
+        'title'    => __('Custom Text','Muscleblaze'),
+        'panel'    => 'text_blocks',
+        'priority' => 10
+    ) );
+
+    // Add setting for text
+    $wp_customize->add_setting( 'title_text_block', array(
+         'default'           => __( 'Default text', 'Muscleblaze' ),
+         'sanitize_callback' => 'sanitize_text'
+    ) );
+
+    // Add control for text
+    $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'custom_title_text',
+            array(
+                'label'    => __( 'Custom Text', 'Muscleblaze' ),
+                'section'  => 'custom_title_text',
+                'settings' => 'title_text_block',
+                'type'     => 'text'
+            )
+        )
+    );
+
+    // Add section for image
+    $wp_customize->add_section( 'custom_header_image' , array(
+        'title'    => __('Header Image','Muscleblaze'),
+        'panel'    => 'text_blocks',
+        'priority' => 11
+    ) );
+
+    // Add setting for image
+    $wp_customize->add_setting( 'header_image', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_image'
+    ) );
+
+    // Add control for image
+    $wp_customize->add_control( new WP_Customize_Image_Control(
+        $wp_customize,
+        'header_image_control',
+        array(
+            'label'    => __( 'Header Image', 'Muscleblaze' ),
+            'section'  => 'custom_header_image',
+            'settings' => 'header_image',
+            'priority' => 10
+        )
+    ) );
+
+    // Sanitize text
+    function sanitize_text( $text ) {
+        return sanitize_text_field( $text );
+    }
+
+    // Sanitize image
+    function sanitize_image( $image ) {
+        return esc_url_raw( $image );
+    }
+}
+add_action( 'customize_register', 'theme_name_register_theme_customizer' );

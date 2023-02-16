@@ -109,7 +109,7 @@ do_action('genesis_after_header');
 				</div>
 				<div class="promo-text">
 					<div class="container-wrapper">
-						<p>Level up your fitness journey with MuscleBlaze</p>
+						<p><?php echo get_theme_mod('title_text_block', 'Default text'); ?></p>
 					</div>
 				</div>
 			</div>
