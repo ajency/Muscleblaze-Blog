@@ -730,6 +730,7 @@ a.link-post:focus {
     width: 100%;
     float: left;
     margin: 0;
+	font-family: 'DIN-Regular',sans-serif;
 }
 
 .blog-date {
